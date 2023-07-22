@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #111;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #29d9d5;
+  border-radius: 5rem;
+}
+
+body {
+  width: 100%;
+  height:100vh;
+  background-image: url('https://lh3.googleusercontent.com/8ts7vWjqs5KCrAXXtzz2kqqIhxP2ZcbJfwWF-1X601C4XfBcDF663VCj-TtdBoqvIiY9t8Sv-HL9W5uOVOJBKC5bZWlYz6trTBKcMfBDTy12a__YEUGinIJscrAVs_PLIRY57KCvy5cm-QfWRJmhWazS9a6WuqMcU-H-H286V7hcmqLUrFYGuXQgfPvDjXACqamJZ5Ov5dWrgSC9dNAi7fjjdn4EHQmZ3jSSZ1dpUiMI4zCozARbae6MhmVs_oNEELBuXWMU3SCDt22QmdwAQHXpwodt3vAi3XF_FJfcs8CjjJwG33wDOCN5x_hqLn2VWwzm0nqlL77OPb98xT2gHF6GWQFUNOYZ00EYuvUyTOVGuXJcnw9I6ZBd-RuJD4Y2tY0L5HT0voPNkWhrV9ekvepRwZC2LN64pO6BsoiXg5AHfWS-uwhr3WUoTTedqk8Z5sOpIBZN51aI-sU43DXeL6GsyZOgD7Ky_tgI4DEFNVwJP_a3v3PGjbtfoWd45HbkzU76oEw_zqh4vwV1OXYyuNSSh41GuydCN9GNoNdTPB1YH7ZMLkOIkMOFH1y2NJyjERS4tH-AEWK8MEGMRiallZPIbQb0o0-Z9bICGigofW9oXzNZXbgOB3IpFqBLbrLbUnA1UjWKvxehn_uiuI8r4hANtorzwx4XSHUArlYO-I2LVVRluO2gBw3Z7RYHZofDwt0PhH9MCGnirhiJdOx7n9XAxxCP1GRHr9S9gSUmYTX0SarbDfkuP8LYyQwheRWdnzSHlXF4JrcyoZrO2xVl7nduQLOtBL8hjRw=w1483-h1008-no?authuser=0') ;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: #29d9d5;
+  font-size: 2rem;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #aaa;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: #29d9d5;
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: .5rem;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #222;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+  .home {
+    margin-top: 10rem;
+  }
+  .home .content span {
+    font-size: 8vw;
+  }
+  .home .content h3 {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .about .content h3 {
+    font-size: 3.5rem;
+  }
+  .banner .content h3 {
+    font-size: 2.7rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #111;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #29d9d5;
+  border-radius: 5rem;
+}
+
+body {
+  width: 100%;
+  height:100vh;
+  background-image: url(https://lh3.googleusercontent.com/8ts7vWjqs5KCrAXXtzz2kqqIhxP2ZcbJfwWF-1X601C4XfBcDF663VCj-TtdBoqvIiY9t8Sv-HL9W5uOVOJBKC5bZWlYz6trTBKcMfBDTy12a__YEUGinIJscrAVs_PLIRY57KCvy5cm-QfWRJmhWazS9a6WuqMcU-H-H286V7hcmqLUrFYGuXQgfPvDjXACqamJZ5Ov5dWrgSC9dNAi7fjjdn4EHQmZ3jSSZ1dpUiMI4zCozARbae6MhmVs_oNEELBuXWMU3SCDt22QmdwAQHXpwodt3vAi3XF_FJfcs8CjjJwG33wDOCN5x_hqLn2VWwzm0nqlL77OPb98xT2gHF6GWQFUNOYZ00EYuvUyTOVGuXJcnw9I6ZBd-RuJD4Y2tY0L5HT0voPNkWhrV9ekvepRwZC2LN64pO6BsoiXg5AHfWS-uwhr3WUoTTedqk8Z5sOpIBZN51aI-sU43DXeL6GsyZOgD7Ky_tgI4DEFNVwJP_a3v3PGjbtfoWd45HbkzU76oEw_zqh4vwV1OXYyuNSSh41GuydCN9GNoNdTPB1YH7ZMLkOIkMOFH1y2NJyjERS4tH-AEWK8MEGMRiallZPIbQb0o0-Z9bICGigofW9oXzNZXbgOB3IpFqBLbrLbUnA1UjWKvxehn_uiuI8r4hANtorzwx4XSHUArlYO-I2LVVRluO2gBw3Z7RYHZofDwt0PhH9MCGnirhiJdOx7n9XAxxCP1GRHr9S9gSUmYTX0SarbDfkuP8LYyQwheRWdnzSHlXF4JrcyoZrO2xVl7nduQLOtBL8hjRw=w1483-h1008-no?authuser=0) ;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: #29d9d5;
+  font-size: 2rem;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #aaa;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: #29d9d5;
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: .5rem;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #222;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+  .home {
+    margin-top: 10rem;
+  }
+  .home .content span {
+    font-size: 8vw;
+  }
+  .home .content h3 {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.row {
+  display:flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col {
+  flex-basis: 50%;
+}
+
+h1{
+  color: #fff;
+  font-size: 80px;
+}
+p{
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px ;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.button {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.button:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.card1
+{
+  background-image: url(https://c0.wallpaperflare.com/preview/69/95/798/the-queen-victoria-memorial-buckingham-palace-england-palace.jpg);
+}
+
+.card2
+{
+  background-image: url(https://media.istockphoto.com/photos/queen-victoria-statue-victoria-memorial-kolkata-picture-id1076088312?k=20&m=1076088312&s=170667a&w=0&h=eD-6lLH7H8h6PeH0ow8P81u4Vsvwk23SASPhj3zKKYU=);
+}
+
+.card3
+{
+  background-image: url(https://www.mrsmithworldphotography.com/photos/Victoria-Memorial-1.jpg);
+}
+.card4
+{
+  background-image: url(https://media.istockphoto.com/photos/victoria-memorial-kolkata-india-reflection-on-water-picture-id474073415?k=20&m=474073415&s=612x612&w=0&h=Y35fgA_0JkFFuYyY7Jl-qTLwGosmwSLo1udRcffy8_w=);
+}
+
+.card5
+{
+  background-image: url(https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Zvonimir%20Atletic,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1575887159/ctx8dwxgjopctnrqexb2.jpg);
+}
+
+.card6
+{
+  background-image: url(https://www.trawell.in/admin/images/upload/555418532Victoria-Memorial-Kolkata.jpg);
+}
+
+.card7
+{
+  background-image: url(https://st2.depositphotos.com/1005893/9045/i/600/depositphotos_90450692-stock-photo-victoria-memorial-lake-reflection-in.jpg);
+}
+
+.card8
+{
+  background-image: url(https://i.pinimg.com/originals/ee/1f/3f/ee1f3f02d573f7a05504e5d6c3fff777.jpg);
+}
+
+.card9
+{
+  background-image: url(https://t3.ftcdn.net/jpg/02/47/79/88/240_F_247798818_cquNgM3LfQW2FdQE2sP2hJtYsQfE5uUY.jpg);
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  
+}
+
+h3{
+  font-size: 0;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.card p{
+  text-shadow: 0 0 15px #000;
+  font-size: 8px;
+}
+
+

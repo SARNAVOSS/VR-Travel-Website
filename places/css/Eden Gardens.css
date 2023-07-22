@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #111;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #29d9d5;
+  border-radius: 5rem;
+}
+
+body {
+  width: 100%;
+  height:100vh;
+  background-image: url('https://lh3.googleusercontent.com/OuXUvq4DWGj3FODu0oO8QqrNt5KQkLpgv3HmBUVgL9-bpAGX5-c4Z4qwabsR9EvXpZBcHnXCois2iZ9JzJJfbjx182arI3cYP50vEKG_iJ00mOZUHbX4vN_oQjMavl_6MkjRrDkYsh47LZyEaa-7nVH1RI-MXVq-fKWQHgFOK5CePevu_PVSK2G8tCKvxLiQ0yv3z_WYJ1ZbaYodfvDcjZVCc3MbWCHHgxnfwyjVqlJEuoRVI3ctq0QWke5Sg_tiTVNP9UJtkM0frSEzvAZD7I_iVIJOsaKyJNOLutL117Ga7d3OXHYxVKKlX05dS1HbIXMzho1jPD6oRQVUpaA3WD0Lc_3OXv80e4KTr1MNCAzZkvcfWGUoGhFb0msldjBTZL4lbg7vxhFfXbTL1wLEJF0h20uGFkN1ElDlhR8Ot6c_IMGEx35FQIYfey5GMFz4SMswyHkZuD-h1BM5fV5Ws1TMQ1SLj66XT5KQ72c_wSGIIl84nJcDWwAZcX72rDd_bCKr4n-v8QE8mLTpOn8sw4pLTuyCf_eWGYVr5EFQ6TCKYGxuEtSnoqb_5SzJlBI9lp_wocPwJSNp6F-t10npYzmFK9JBqWYGIAOKJ2yvA-gwxoFonq3nrcESjdn2o5XYT7UaBRVIniLy18yjgaSL2O1EW5UO8cTkzPn3EsNqkCt01ghOkAc6UK29dpCFeMFkCWHuZXqwvDlIZqTEU2dq2ZFahzFConcqnjDHhuiQEF9OhRh4r3SItxYguehksN1HzL0ct9g1l2_XQjwEd957j7nBMhKcHgr9sso=w353-h198-no?authuser=0') ;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: #29d9d5;
+  font-size: 2rem;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #aaa;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: #29d9d5;
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: .5rem;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #222;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+  .home {
+    margin-top: 10rem;
+  }
+  .home .content span {
+    font-size: 8vw;
+  }
+  .home .content h3 {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .about .content h3 {
+    font-size: 3.5rem;
+  }
+  .banner .content h3 {
+    font-size: 2.7rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #111;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #29d9d5;
+  border-radius: 5rem;
+}
+
+body {
+  width: 100%;
+  height:100vh;
+  background-image: url(https://lh3.googleusercontent.com/OuXUvq4DWGj3FODu0oO8QqrNt5KQkLpgv3HmBUVgL9-bpAGX5-c4Z4qwabsR9EvXpZBcHnXCois2iZ9JzJJfbjx182arI3cYP50vEKG_iJ00mOZUHbX4vN_oQjMavl_6MkjRrDkYsh47LZyEaa-7nVH1RI-MXVq-fKWQHgFOK5CePevu_PVSK2G8tCKvxLiQ0yv3z_WYJ1ZbaYodfvDcjZVCc3MbWCHHgxnfwyjVqlJEuoRVI3ctq0QWke5Sg_tiTVNP9UJtkM0frSEzvAZD7I_iVIJOsaKyJNOLutL117Ga7d3OXHYxVKKlX05dS1HbIXMzho1jPD6oRQVUpaA3WD0Lc_3OXv80e4KTr1MNCAzZkvcfWGUoGhFb0msldjBTZL4lbg7vxhFfXbTL1wLEJF0h20uGFkN1ElDlhR8Ot6c_IMGEx35FQIYfey5GMFz4SMswyHkZuD-h1BM5fV5Ws1TMQ1SLj66XT5KQ72c_wSGIIl84nJcDWwAZcX72rDd_bCKr4n-v8QE8mLTpOn8sw4pLTuyCf_eWGYVr5EFQ6TCKYGxuEtSnoqb_5SzJlBI9lp_wocPwJSNp6F-t10npYzmFK9JBqWYGIAOKJ2yvA-gwxoFonq3nrcESjdn2o5XYT7UaBRVIniLy18yjgaSL2O1EW5UO8cTkzPn3EsNqkCt01ghOkAc6UK29dpCFeMFkCWHuZXqwvDlIZqTEU2dq2ZFahzFConcqnjDHhuiQEF9OhRh4r3SItxYguehksN1HzL0ct9g1l2_XQjwEd957j7nBMhKcHgr9sso=w353-h198-no?authuser=0) ;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: #29d9d5;
+  font-size: 2rem;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #aaa;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: #29d9d5;
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: .5rem;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #222;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+  .home {
+    margin-top: 10rem;
+  }
+  .home .content span {
+    font-size: 8vw;
+  }
+  .home .content h3 {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.row {
+  display:flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col {
+  flex-basis: 50%;
+}
+
+h1{
+  color: #fff;
+  font-size: 100px;
+}
+p{
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px ;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.button {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.button:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.card1
+{
+  background-image: url(https://thumbs.dreamstime.com/b/colour-whistlepodu-kkr-s-homeground-eden-garden-stadium-roar-lion-kkrs-stadiumroar-lions-144896440.jpg);
+}
+
+.card2
+{
+  background-image: url(https://image3.mouthshut.com/images/Restaurant/Photo/-17833_176884.png);
+}
+
+.card3
+{
+  background-image: url(https://pbs.twimg.com/media/FEuDDSoVIAAMXKx?format=jpg&name=4096x4096);
+}
+
+.card4
+{
+  background-image: url(https://static.toiimg.com/thumb/msid-72204806,imgsize-851055,width-400,resizemode-4/72204806.jpg);
+}
+
+.card5
+{
+  background-image: url(https://static.toiimg.com/thumb/msid-72192874,imgsize-266964,width-400,resizemode-4/72192874.jpg);
+}
+
+.card6
+{
+  background-image: url(https://image3.mouthshut.com/images/Restaurant/Photo/-94857_176883.png);
+}
+
+.card7
+{
+  background-image: url(https://images.prothomalo.com/prothomalo-english%2Fimport%2Fmedia%2F2019%2F11%2F21%2Fc92f876e97122aa1a03bfe61213a7c26-Kolkata.jpg?auto=format%2Ccompress&format=webp&w=400&dpr=2.6);
+}
+
+.card8
+{
+  background-image: url(https://static.toiimg.com/thumb/msid-87809451,width-1200,height-900,resizemode-4/.jpg);
+}
+
+.card9
+{
+  background-image: url(https://files.prokerala.com/news/photos/imgs/1024/kolkata-a-view-of-the-eden-gardens-kolkata-287226.jpg);
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  
+}
+
+h3{
+  font-size: 0;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.card p{
+  text-shadow: 0 0 15px #000;
+  font-size: 8px;
+}
+
+
